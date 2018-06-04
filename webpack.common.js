@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
+  mode: 'development',
   entry: {
     main: './src/index.js'
   },
@@ -31,17 +32,12 @@ module.exports = {
           }
         ]
       }
-    ],
-    plugins: [
-      new HtmlWebPackPlugin({
-        template: 'index.html'
-      }),
-      new CleanWebpackPlugin(['dist'])
-    ],
-    devServer: {
-      host: 'localhost',
-      port: 3000,
-      open: true
-    }
-  }
+    ]
+  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: 'index.html'
+    }),
+    new CleanWebpackPlugin(['dist'])
+  ]
 };
