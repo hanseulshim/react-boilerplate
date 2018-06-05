@@ -5,7 +5,7 @@ import toggleName from 'actions';
 import { toggleNameFunction, showName } from 'types';
 
 class App extends Component {
-  showName() {
+  showName = () => {
     this.props.toggleName();
   }
 
