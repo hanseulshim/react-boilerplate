@@ -1,7 +1,7 @@
 {
   "name": "react-boilerplate",
   "version": "1.0.0",
-  "description": "This is a simple react boilerplate to get started",
+  "description": "This is a simple react boilerplate to get started on future projects",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -14,7 +14,7 @@
   "jest": {
     "setupTestFrameworkScriptFile": "./test/enzyme.setup.js"
   },
-  "author": "",
+  "author": "Hanseul Shim",
   "license": "ISC",
   "dependencies": {
     "clean-webpack-plugin": "^0.1.19",
