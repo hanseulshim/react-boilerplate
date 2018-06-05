@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import toggleName from 'actions';
+import { toggleNameFunction, showName } from 'types';
 
 class App extends Component {
   showName() {
@@ -26,5 +27,10 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   toggleName: bindActionCreators(toggleName, dispatch),
 });
+
+App.propTypes = {
+  toggleName: toggleNameFunction.isRequired,
+  showName: showName.isRequired,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
