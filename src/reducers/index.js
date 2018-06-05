@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import nameReducer from 'reducers/nameReducer';
+import nameReducer from './nameReducer';
 
 const rootReducer = combineReducers({
-  showName: nameReducer
+  showName: nameReducer,
 });
 
 export default rootReducer;

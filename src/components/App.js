@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as actions from 'actions';
+import toggleName from 'actions';
 
 class App extends Component {
-  showName = () => {
-    this.props.actions.showName();
-  };
+  showName() {
+    this.props.toggleName();
+  }
 
   render() {
     return (
@@ -19,19 +19,12 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    showName: state.showName
-  };
-};
+const mapStateToProps = state => ({
+  showName: state.showName,
+});
 
-const mapDispatchToProps = dispatch => {
-  return {
-    actions: bindActionCreators(actions, dispatch)
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  toggleName: bindActionCreators(toggleName, dispatch),
+});
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

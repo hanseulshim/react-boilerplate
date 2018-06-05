@@ -6,11 +6,11 @@ import rootReducer from 'reducers';
 import initialState from 'reducers/initialState';
 
 const logger = createLogger({
-  collapsed: true
+  collapsed: true,
 });
 
 export default createStore(
   rootReducer,
   initialState,
-  applyMiddleware(thunk, logger)
+  applyMiddleware(thunk, logger),
 );
